@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   pull_request:
+  # Lets a run be re-triggered from the Actions tab without a new commit.
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
