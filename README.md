@@ -63,7 +63,7 @@ password reset, a one-off notice. The address is an argument, and the email goes
 out because your code said so.
 
 ```js
-await mailtea.emails.send({ from, to: "reader@example.com", subject, html });
+await mailtea.emails.send({ from, to: "you@yourdomain.com", subject, html });
 ```
 
 **Marketing — `posts.send`.** You name no recipients at all. You create a post
