@@ -80,7 +80,7 @@ async function main() {
   // Built here, not at module scope, so a missing key surfaces through the
   // handler below as a message rather than as a stack trace.
   const mailtea = new Mailtea(process.env.MAILTEA_API_KEY, {
-    // Only needed for local dev or a self-hosted Mailtea. Omit in production.
+    // Optional override of the API host. Unset, the SDK uses https://api.mailtea.app.
     baseUrl: process.env.MAILTEA_API_BASE_URL
   });
 

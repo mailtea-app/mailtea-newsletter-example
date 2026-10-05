@@ -90,7 +90,7 @@ export async function startMockMailtea() {
         return send(200, { object: "email", id: url.pathname.split("/").pop() });
       }
       // Cancel is POST /v1/emails/:id/cancel. There is no DELETE on emails —
-      // the real API does not define one (apps/api/src/email-rest.ts).
+      // the real API does not define one.
       if (req.method === "POST" && /^\/v1\/emails\/[^/]+\/cancel$/.test(url.pathname)) {
         return send(200, { object: "email", id: url.pathname.split("/")[3] });
       }
